@@ -22,7 +22,7 @@ body {
 
 body::-webkit-scrollbar {
     display: block;
-    width: 8px;
+    width: 0.6em;
     background-color: #000;
 }
 
@@ -33,44 +33,47 @@ body::-webkit-scrollbar-thumb {
 }
 
 #cursor {
-    height: 20px;
-    width: 20px;
+    height: 1.25em;
+    width: 1.25em;
     background-color: #95C121;
     border-radius: 50%;
     position: fixed;
     z-index: 100;
+    pointer-events: none;
+    /* transition: all 0.1s; */
 }
 
 #cursor-blur {
-    height: 500px;
-    width: 500px;
-    background-color: #7e8a5f8e;
+    height: 31.25em;
+    width: 31.25em;
+    background-color: rgba(126, 138, 95, 0.56);
     border-radius: 50%;
     position: fixed;
-    z-index: 1;
+    z-index: 1; /* 0 */
     filter: blur(50px);
+    transition: filter 0.5s;
 }
 
 #nav {
-    height: 145px;
+    height: 9.66em;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 150px;
-    gap: 45px;
+    padding: 0 9.66em;
+    gap: 2.88em;
     position: fixed;
-    z-index: 100;
+    z-index: 100; /* 1 */
 }
 
 #nav img {
-    height: 75px;
+    max-height: 75px;
+    object-fit: cover;
 }
 
 #nav h4 {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 video {
@@ -80,7 +83,7 @@ video {
     position: fixed;
     z-index: -1;
 }
-
+/* First revisting of code is done till here */
 #main {
     position: relative;
     background-color: rgba(0, 0, 0, 0.37);
@@ -141,6 +144,7 @@ video {
     justify-content: center;
     border-radius: 50%;
     transition: all ease 0.5s;
+    /* z-index: 101; */
 }
 
 #page1 #arrow i {
