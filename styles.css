@@ -55,13 +55,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #nav {
-    height: 9.66em;
+    height: 8.5em;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 9.66em;
-    gap: 2.88em;
+    padding: 0 9em;
+    gap: 2em;
     position: fixed;
     z-index: 100; /* 1 */
 }
@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
 
 #nav h4 {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 video {
@@ -83,14 +83,13 @@ video {
     position: fixed;
     z-index: -1;
 }
-/* First revisting of code is done till here */
 #main {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.40);
 }
 
 #page1 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -102,7 +101,7 @@ video {
 }
 
 #page1 h1 {
-    font-size: 140px;
+    font-size: 6em;
     font-weight: 900;
     position: relative;
 }
@@ -113,22 +112,21 @@ video {
     color: #000;
     top: -4px;
     left: -4px;
-    -webkit-text-stroke: 2px #95C121;
+    -webkit-text-stroke: 1px #95C121;
     z-index: -1;
 }
 
 #page1 h2 {
-    font-size: 30px;
+    font-size: 1.5em;
     font-weight: 800;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 #page1 p {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 500;
-    width: 40%;
-    /* margin-top: 20px; */
+    width: 50%;
 }
 
 #page1 #arrow {
@@ -144,11 +142,10 @@ video {
     justify-content: center;
     border-radius: 50%;
     transition: all ease 0.5s;
-    /* z-index: 101; */
 }
 
 #page1 #arrow i {
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 100;
 }
 
@@ -177,16 +174,17 @@ video {
 
 #scroller h4 {
     display: inline-block;
-    font-size: 120px;
+    font-size: 6em;
     font-weight: 800;
     margin-right: 10px;
-    color: transparent;
-    transition: all linear 0.4s;
-    -webkit-text-stroke: 2px #95C121;
+    transition: color linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
 }
 
 #scroller h4:hover {
     color: #95C121;
+    -webkit-text-stroke: 2px #95C121;
 }
 
 .scroller-in {
@@ -196,6 +194,8 @@ video {
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
 }
 
 
@@ -208,6 +208,8 @@ video {
         transform: translateX(-100%);
     }
 }
+
+/* Done till here */
 
 #about-us {
     height: 40vh;
